@@ -59,7 +59,7 @@ ${text}.`;
 
         //Parse the JSON string into actual data
         const flashcards = JSON.parse(cleanedText);
-
+        console.log("Parsed flashcards:", flashcards);  // add this line
         return NextResponse.json({ flashcards });
     } catch (error) {
         console.error("Error generating flashcards:", error);

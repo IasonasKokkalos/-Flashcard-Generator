@@ -35,7 +35,8 @@ export default function FlashcardForm({ onDeckCreated }: FlashcardFormProps) {
             const data = await response.json();
 
             //Add IDs to each card (Gemini doesnt generate thses)
-            const cardsWithIds: Flashcard[] = data.flashcard.map(
+            const rawCards = data.flashcards || data;
+            const cardsWithIds: Flashcard[] = rawCards.map(
                 (card: { question: string; answer: string}) => ({
                     ...card,
                     id: generateId(),
