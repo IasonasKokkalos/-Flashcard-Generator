@@ -5,11 +5,11 @@ import { Flashcard, Deck } from "@/types";
 import { saveDeck, generateId } from "@/lib/storage";
 import { Cal_Sans } from "next/font/google";
 
-interface FlashcardFromProps {
+interface FlashcardFormProps {
     onDeckCreated: (deck: Deck) => void;
 }
 
-export default function FlashcardForm({ onDeckCreated }: FlashcardFromProps) {
+export default function FlashcardForm({ onDeckCreated }: FlashcardFormProps) {
     const [text, setText] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
