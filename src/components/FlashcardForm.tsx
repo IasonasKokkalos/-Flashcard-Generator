@@ -80,7 +80,7 @@ export default function FlashcardForm({ onDeckCreated }: FlashcardFormProps) {
                 <p className="text-sm text-gray-500">
                     {text.length > 0
                     ? `${text.length} character`
-                    : "Paste text to generate fdlashcards"}
+                    : "Paste text to generate flashcards"}
                 </p>
 
                 <button
